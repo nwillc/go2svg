@@ -4,24 +4,24 @@ import (
 	"github.com/ajstarks/svgo"
 )
 
-type CodeMonkey struct {
-	*svg.SVG
+type codeMonkey struct {
+	canvas *svg.SVG
 }
 
 const (
-	BlackWhite = "stroke: black; stroke-width: 2; fill: white;"
-	BlackBlack = "stroke: black; fill: black;"
+	blackWhite = "stroke: black; stroke-width: 2; fill: white;"
+	blackBlack = "stroke: black; fill: black;"
 )
 
-func (canvas *CodeMonkey) Ear(rx int, ry int) {
-	canvas.SVG.Circle(rx, ry, 40, BlackWhite)
-	canvas.SVG.Circle(rx, ry, 28, BlackWhite)
+func (codeMonkey *codeMonkey) Ear(rx int, ry int) {
+	codeMonkey.canvas.Circle(rx, ry, 40, blackWhite)
+	codeMonkey.canvas.Circle(rx, ry, 28, blackWhite)
 }
 
-func (canvas *CodeMonkey) Eye(rx int, ry int) {
-	canvas.Circle(rx, ry, 20, BlackWhite)
+func (codeMonkey *codeMonkey) Eye(rx int, ry int) {
+	codeMonkey.canvas.Circle(rx, ry, 20, blackWhite)
 }
 
-func (canvas *CodeMonkey) Nostril(rx int, ry int) {
-	canvas.Circle(rx, ry, 4, BlackBlack)
+func (codeMonkey *codeMonkey) Nostril(rx int, ry int) {
+	codeMonkey.canvas.Circle(rx, ry, 4, blackBlack)
 }
