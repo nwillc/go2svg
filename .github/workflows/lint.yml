@@ -1,0 +1,13 @@
+on: push
+name: build
+jobs:
+  go-pipeline:
+    name: Go Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: go1.14 linter
+        uses: shoukoo/golang-pipeline/go1.14/linter@master
+        with:
+          GOLINT: on
+          GOLINTPATH: .
+          MISSPELL: off
