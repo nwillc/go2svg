@@ -4,7 +4,7 @@ import (
 	"github.com/ajstarks/svgo"
 )
 
-type CodeMonkey struct {
+type codeMonkey struct {
 	canvas *svg.SVG
 }
 
@@ -13,15 +13,15 @@ const (
 	blackWhite = "stroke: black; stroke-width: 2; fill: white;"
 )
 
-func (codeMonkey *CodeMonkey) ear(rx int, ry int) {
+func (codeMonkey *codeMonkey) ear(rx int, ry int) {
 	codeMonkey.canvas.Circle(rx, ry, 40, blackWhite)
 	codeMonkey.canvas.Circle(rx, ry, 28, blackWhite)
 }
 
-func (codeMonkey *CodeMonkey) eye(rx int, ry int) {
+func (codeMonkey *codeMonkey) eye(rx int, ry int) {
 	codeMonkey.canvas.Circle(rx, ry, 20, blackWhite)
 }
 
-func (codeMonkey *CodeMonkey) nostril(rx int, ry int) {
+func (codeMonkey *codeMonkey) nostril(rx int, ry int) {
 	codeMonkey.canvas.Circle(rx, ry, 4, blackBlack)
 }

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	codeMonkey := &CodeMonkey{svg.New(os.Stdout)}
+	codeMonkey := &codeMonkey{svg.New(os.Stdout)}
 	codeMonkey.canvas.Start(300, 300)
 	// Label
 	codeMonkey.canvas.Text(40, 50, "#CODE", "font-family:monospace;font-size:40px;")
