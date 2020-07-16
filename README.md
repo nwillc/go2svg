@@ -1,4 +1,4 @@
-[![Lint](https://github.com/nwillc/go2svg/workflows/build/badge.svg)]
+
 -----
 # Go2SVG
 
