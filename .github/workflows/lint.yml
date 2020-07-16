@@ -9,5 +9,5 @@ jobs:
         uses: shoukoo/golang-pipeline/go1.13/linter@master
         with:
           GOLINT: on
-          GOLINTPATH: .
+          GOLINTPATH: github.com/nwillc/go2svg
           MISSPELL: off
