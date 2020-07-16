@@ -14,7 +14,7 @@ func main() {
 	// Label
 	canvas.Text(40, 50, "#CODE", "font-family:monospace;font-size:40px;")
 	// Ears
-	svgCanvas.Ear( 100, 100)
+	svgCanvas.Ear(100, 100)
 	svgCanvas.Ear(240, 70)
 	// Face
 	canvas.Circle(180, 140, 80, "stroke: black; stroke-width: 2; fill: #aa450f;")
