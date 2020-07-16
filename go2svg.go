@@ -25,20 +25,20 @@ func main() {
 	canvas.Start(width, height)
 	// Label
 	canvas.Text(40, 50, "#CODE", "font-family:monospace;font-size:40px;")
-	// ears
+	// Ears
 	ear(canvas, 100, 100)
 	ear(canvas, 240, 70)
-	// face
-	canvas.Circle(180,140, 80, "stroke: black; stroke-width: 2; fill: #aa450f;")
-	// eyes
+	// Face
+	canvas.Circle(180, 140, 80, "stroke: black; stroke-width: 2; fill: #aa450f;")
+	// Eyes
 	eye(canvas, 160, 95)
-	eye(canvas, 160 + 45, 95 - 5)
-	// muzzle
-	canvas.Circle(195,178, 65, "stroke: black; stroke-width: 2; fill: white;")
+	eye(canvas, 160+45, 95-5)
+	// Muzzle
+	canvas.Circle(195, 178, 65, "stroke: black; stroke-width: 2; fill: white;")
 	// Nostrils
 	nostril(canvas, 178, 138)
-	nostril(canvas, 178 + 35, 138 - 5)
+	nostril(canvas, 178+35, 138-5)
 	// Mouth
-	canvas.Path("M 150 150 C 100,250 305,260 230,140 C 205,190 165,170 150,150 Z","stroke: black; stroke-width: 2; fill: red;")
+	canvas.Path("M 150 150 C 100,250 305,260 230,140 C 205,190 165,170 150,150 Z", "stroke: black; stroke-width: 2; fill: red;")
 	canvas.End()
 }
