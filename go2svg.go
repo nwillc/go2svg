@@ -6,11 +6,9 @@ import (
 )
 
 func main() {
-	width := 300
-	height := 300
 	canvas := svg.New(os.Stdout)
 	svgCanvas := &CodeMonkey{canvas}
-	canvas.Start(width, height)
+	canvas.Start(300, 300)
 	// Label
 	canvas.Text(40, 50, "#CODE", "font-family:monospace;font-size:40px;")
 	// Ears
