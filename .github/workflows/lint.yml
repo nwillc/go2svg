@@ -1,12 +1,28 @@
-on: push
-name: build
+on:
+  push:
+    branches: [ master ]
+
 jobs:
-  go-pipeline:
-    name: Go Checks
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - name: go1.13 linter
-        uses: shoukoo/golang-pipeline/go1.13/linter@master
-        with:
-          GOLINT: on
-          MISSPELL: off
+
+  steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: ‘1.14.0’
+
+    - name: Install dependencies
+      run: |
+        go version
+        go get -u golang.org/x/lint/golint
+
+    - name: Run build
+      run: go build .
+
+    - name: Run vet & lint
+      run: |
+        go vet .
+        golint .
