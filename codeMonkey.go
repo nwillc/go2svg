@@ -5,7 +5,7 @@ import (
 )
 
 type codeMonkey struct {
-	canvas *svg.SVG
+	*svg.SVG
 }
 
 const (
@@ -14,14 +14,14 @@ const (
 )
 
 func (codeMonkey *codeMonkey) ear(rx int, ry int) {
-	codeMonkey.canvas.Circle(rx, ry, 40, blackWhite)
-	codeMonkey.canvas.Circle(rx, ry, 28, blackWhite)
+	codeMonkey.Circle(rx, ry, 40, blackWhite)
+	codeMonkey.Circle(rx, ry, 28, blackWhite)
 }
 
 func (codeMonkey *codeMonkey) eye(rx int, ry int) {
-	codeMonkey.canvas.Circle(rx, ry, 20, blackWhite)
+	codeMonkey.Circle(rx, ry, 20, blackWhite)
 }
 
 func (codeMonkey *codeMonkey) nostril(rx int, ry int) {
-	codeMonkey.canvas.Circle(rx, ry, 4, blackBlack)
+	codeMonkey.Circle(rx, ry, 4, blackBlack)
 }
